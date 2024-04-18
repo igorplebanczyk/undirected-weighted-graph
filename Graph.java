@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.PriorityQueue;
+
 public class Graph {
-    ArrayList<Node> nodes = new ArrayList<Node>();
-    ArrayList<Edge> edges = new ArrayList<Edge>();
+    ArrayList<Node> nodes = new ArrayList<>();
+    ArrayList<Edge> edges = new ArrayList<>();
 
     public void addNode() {
         Node node = new Node();
