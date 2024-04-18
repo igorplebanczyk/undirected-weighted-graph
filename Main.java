@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Graph graph = new Graph();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 7; i++) {
             graph.addNode();
         }
 
@@ -17,10 +17,19 @@ public class Main {
         Node node1 = nodes.get(0);
         Node node2 = nodes.get(1);
         Node node3 = nodes.get(2);
+        Node node4 = nodes.get(3);
+        Node node5 = nodes.get(4);
+        Node node6 = nodes.get(5);
+        Node node7 = nodes.get(6);
 
         graph.addEdge(node1, node2, 1);
         graph.addEdge(node1, node3, 1);
         graph.addEdge(node2, node3, 1);
+        graph.addEdge(node3, node4, 6);
+        graph.addEdge(node3, node5, 2);
+        graph.addEdge(node5, node7, 12);
+        graph.addEdge(node5, node6, 4);
+        graph.addEdge(node6, node7, 3);
 
         ArrayList<Edge> edges = graph.getEdges();
 
@@ -51,5 +60,8 @@ public class Main {
         for (Edge edge : edges) {
             System.out.println("  - From Node: " + edge.v1.id + " To Node: " + edge.v2.id + " (Weight: " + edge.weight + ")");
         }
+
+        System.out.println("Dijkstra from Node of ID 2 and Node of ID 7:\n");
+        System.out.println(graph.dijkstraAlgorithm(2, 7));
     }
 }

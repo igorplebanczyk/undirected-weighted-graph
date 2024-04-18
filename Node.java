@@ -10,4 +10,8 @@ public class Node {
             this.id = ++counter;
         }
     }
+
+    public int getDistance() {
+        return this.distance;
+    }
 }
